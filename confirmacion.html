@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+    <title>Agencia Tributaria</title>
+ 
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="./css/modelo.css">
+	<script type="text/javascript" src="./jquery/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+	
+	function popUp(){
+		$(document).ready(function(){
+		  $('#help').click(function(){
+				$('#popup').fadeIn('slow');
+				$('.popup-overlay').fadeIn('slow');
+				$('.popup-overlay').height($(window).height());
+				return false;
+			});
+			
+			$('#close').click(function(){
+				$('#popup').fadeOut('slow');
+				$('.popup-overlay').fadeOut('slow');
+				return false;
+			});
+		});
+	}
+	</script>
+  </head>
+  <body>
+	<div class="container-fluid">
+	<div id="cabecera">
+	</br>
+	<div class="text-center"><h2><span class="negrita"><div id="titulo">Comunicación de datos al pagador</div></span></h2></div>
+	<div class="text-center"><h2><small class="negrita"><div id="titulo">(artículo 88 del Reglamento del IRPF)</div></small> </h2></div>
+	<div class="text-center"><h4><div id="titulo">Impuesto sobre la Renta de las Personas Físicas y <br>Retenciones sobre rendimientos del trabajo</div></h4></div>	
+	<div class="text-right"><h2><span class="label label-primary">Modelo 145</span></h2></div>
+	</div>
+	
+	<ul class="nav nav-tabs nav-justified">
+	  <li><a href="inicio.html">Inicio</a></li>
+	  <li><a href="perceptor.html">Datos del perceptor</a></li>
+	  <li><a href="descendientes.html">Descendientes y ascendientes</a></li>
+	  <li><a href="pensiones.html">Pensiones y pagos</a></li>
+	  <li><a href="comunicacion.html">Comunicación y recibo</a></li>
+	  <li class="active"><a href="confirmacion.html">Confirmación</a></li>
+	</ul>
+	<hr></hr>
+	<div class="progress progress-striped active">
+		<div class="progress-bar" role="progressbar"
+		   aria-valuenow="50" aria-valuemin="10" aria-valuemax="100"
+		   style="width: 100%">
+		   <span class="sr-only">100% completado</span>
+		</div>
+	</div>
+
+	<div class="panel panel-primary">
+		<div class="panel-heading"><h1 class="panel-title text-center">Confirmación declaración</h1><a href="javascript:popUp()"><div class="ayuda"><img src="help.png" id="help"></div></a></div><br/>
+			<div id="popup" style="display: none;">
+				<div class="content-popup">
+					<div class="close"><a href="#" id="close"><img src="close.png"/></a></div>
+					<div>
+					<h2>Ayuda</h2>
+					<span class="declaracion"> De conformación con lo dispuesto en el artículo 5 de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, el perceptor tendrá derecho a ser informado previamente de la existencia
+					de un fichero o tratamiento de datos de carácter personal, de la finalidad de la recogida de éstos y de los destinatarios de la información, de la identidad y dirección del responsable del tratamiento o, en su caso, de su
+					representante, así como de la posibilidad de ejercitar sus derechos de acceso, rectificación o cancelación de los mismos.</span>
+					</div>
+				</div>
+			</div>
+	
+			<div class="panel-body">
+		
+			<div class="form-group">
+			<span class ="text-center">
+			<h1 id="tiempo"></h1>		 <!-- <h1 id="dati"></h1>  -->		
+			</span>
+			</div> 
+
+
+
+			<center><label class="fin"> Vd. <p id="dati"></p> ha completado el formulario con éxito. </label></center><br/><br/>
+				<form role="form" action="inicio.html">
+				<center><button type="submit" class="btn btn-primary">Imprimir ejemplares</button></center><br/>
+				</form>
+			</div>
+	</div>
+    <!-- LibrerjQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<!--<script src="js/funciones.js"></script>-->
+				<script language="javascript">
+				if(typeof(Storage) !== "undefined")
+				{
+				document.getElementById("dati").innerHTML = localStorage.getItem("nombre") + ", "+"en "+ localStorage.getItem("day") + ", " + localStorage.getItem("data1");
+				}
+			</script>
+			
+			
+			
+			<script type="text/javascript">
+ var data = new Date();
+  var Gg, Mm, Yr;
+  Gg= data.getDate() + "/ ";
+  Mm= 1 + data.getMonth() + "/ ";
+  Yr=data.getFullYear();
+  
+  Dia = data.getDay();
+  var weekday = new Array(7);
+weekday[0]=  "Domingo";
+weekday[1] = "Lunes";
+weekday[2] = "Martes";
+weekday[3] = "Miercoles";
+weekday[4] = "Jueves";
+weekday[5] = "Viernes";
+weekday[6] = "Sabado";
+var Dia= weekday[data.getDay()];
+ localStorage.setItem("day", Dia);
+ localStorage.setItem("data1", Gg + Mm + Yr);
+  </script>
+
+</div>
+  </body>
+</html>

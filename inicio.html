@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+    <title>Agencia Tributaria</title>
+ 
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="./css/modelo.css">
+	<script type="text/javascript" src="./jquery/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+	
+	function popUp(){
+		$(document).ready(function(){
+		  $('#help').click(function(){
+				$('#popup').fadeIn('slow');
+				$('.popup-overlay').fadeIn('slow');
+				$('.popup-overlay').height($(window).height());
+				return false;
+			});
+			
+			$('#close').click(function(){
+				$('#popup').fadeOut('slow');
+				$('.popup-overlay').fadeOut('slow');
+				return false;
+			});
+		});
+	}
+	</script>
+  </head>
+  <body>
+	<div class="container-fluid">
+	<div id="cabecera">
+	</br>
+	<div class="text-center"><h2><span class="negrita"><div id="titulo">Comunicación de datos al pagador</div></span></h2></div>
+	<div class="text-center"><h2><small class="negrita"><div id="titulo">(artículo 88 del Reglamento del IRPF)</div></small> </h2></div>
+	<div class="text-center"><h4><div id="titulo">Impuesto sobre la Renta de las Personas Físicas y <br>Retenciones sobre rendimientos del trabajo</div></h4></div>	
+	<div class="text-right"><h2><span class="label label-primary">Modelo 145</span></h2></div>
+	</div>
+	
+	<ul class="nav nav-tabs nav-justified">
+	  <li class="active"><a href="inicio.html">Inicio</a></li>
+	  <li><a href="perceptor.html">Datos del perceptor</a></li>
+	  <li><a href="descendientes.html">Descendientes y ascendientes</a></li>
+	  <li><a href="pensiones.html">Pensiones y pagos</a></li>
+	  <li><a href="comunicacion.html">Comunicación y recibo</a></li>
+	  <li><a href="confirmacion.html">Confirmación</a></li>
+	</ul>
+	<hr></hr>
+	<div class="progress progress-striped active">
+		<div class="progress-bar" role="progressbar"
+		   aria-valuenow="50" aria-valuemin="10" aria-valuemax="100"
+		   style="width: 0%">
+		   <span class="sr-only">0% completado</span>
+		</div>
+	</div>
+
+	<div class="panel panel-primary">
+		<div class="panel-heading"><h1 class="panel-title text-center">Inicio</h1><a href="javascript:popUp()"><div class="ayuda"><img src="help.png" id="help"></div></a></div><br/>
+			<div id="popup" style="display: none;">
+				<div class="content-popup">
+					<div class="close"><a href="#" id="close"><img src="close.png"/></a></div>
+					<div>
+					<h2>Ayuda</h2>
+						<span class="declaracion">Si prefiere no comunicar a la empresa o entidad pagadora alguno de los datos a que se refiere este modelo, la retención que se le practique podría resultar superior a la procedente. En tal caso, podrá recuperar la diferencia,
+						si procede, al presentar su declaración del IRPF correspondiente al ejercicio de que se trate.
+						<br/><span class="negrita">Atención:</span> la inclusión de datos falsos, incompletos o inexactos en esta comunicación, así como la falta de comunicación de variaciones en los mismos que, de haber sido conocidas por el pagador, hubieran determinado una retención
+						superior, constituye infracción tributaria sancionable con multa del 35 al 150 por 100 de las cantidades que se hubieran dejado de retener por esta causa. (Artículo 205 de la Ley 58/2003, de 17 de diciembre, General Tributaria).<br/><br/> </span>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<form role="form" action="perceptor.html">
+				<center><button type="submit" class="btn btn-primary">Comenzar formulario</button></center><br/>
+				</form>
+			</div>
+	</div>
+	</div>
+    <!-- LibrerjQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

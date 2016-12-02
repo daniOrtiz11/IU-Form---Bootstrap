@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+    <title>Agencia Tributaria</title>
+ 
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="./css/modelo.css">
+	<script type="text/javascript" src="./jquery/jquery-3.1.1.js"></script> 
+	<script type="text/javascript">
+	$(document).ready(function(){
+	   $("#op2").click(function(evento){
+			if ($("#op2").attr("checked")){
+				$("#oculto").css("display", "none");
+			}else{
+				$("#oculto").css("display", "block");
+			}
+	   });
+	   $("#op1").click(function(evento){
+			$("#oculto").css("display", "none");
+	   });
+	   $("#op3").click(function(evento){
+			$("#oculto").css("display", "none");
+	   });
+	});
+	</script>
+	<script type="text/javascript">
+	function popUp1(){
+		$(document).ready(function(){
+		  $('#help1').click(function(){
+				$('#popup1').fadeIn('slow');
+				$('.popup-overlay').fadeIn('slow');
+				$('.popup-overlay').height($(window).height());
+				return false;
+			});
+			
+			$('#close1').click(function(){
+				$('#popup1').fadeOut('slow');
+				$('.popup-overlay').fadeOut('slow');
+				return false;
+			});
+		});
+	}
+	function popUp2(){
+		$(document).ready(function(){
+		  $('#help2').click(function(){
+				$('#popup2').fadeIn('slow');
+				$('.popup-overlay').fadeIn('slow');
+				$('.popup-overlay').height($(window).height());
+				return false;
+			});
+			
+			$('#close2').click(function(){
+				$('#popup2').fadeOut('slow');
+				$('.popup-overlay').fadeOut('slow');
+				return false;
+			});
+		});
+	}
+	function popUp3(){
+		$(document).ready(function(){
+		  $('#help3').click(function(){
+				$('#popup3').fadeIn('slow');
+				$('.popup-overlay').fadeIn('slow');
+				$('.popup-overlay').height($(window).height());
+				return false;
+			});
+			
+			$('#close3').click(function(){
+				$('#popup3').fadeOut('slow');
+				$('.popup-overlay').fadeOut('slow');
+				return false;
+			});
+		});
+	}
+	</script>
+  </head>
+  
+  <body>
+	<div class="container-fluid">
+	<div id="cabecera">
+	</br>
+	<div class="text-center"><h2><span class="negrita"><div id="titulo">Comunicación de datos al pagador</div></span></h2></div>
+	<div class="text-center"><h2><small class="negrita"><div id="titulo">(artículo 88 del Reglamento del IRPF)</div></small> </h2></div>
+	<div class="text-center"><h4><div id="titulo">Impuesto sobre la Renta de las Personas Físicas y <br>Retenciones sobre rendimientos del trabajo</div></h4></div>	
+	<div class="text-right"><h2><span class="label label-primary">Modelo 145</span></h2></div>
+	</div>
+	
+	<ul class="nav nav-tabs nav-justified">
+	  <li><a href="inicio.html">Inicio</a></li>
+	  <li class="active"><a href="perceptor.html">Datos del perceptor</a></li>
+	  <li><a href="descendientes.html">Descendientes y ascendientes</a></li>
+	  <li><a href="pensiones.html">Pensiones y pagos</a></li>
+	  <li><a href="comunicacion.html">Comunicación y recibo</a></li>
+	  <li><a href="confirmacion.html">Confirmación</a></li>
+	</ul>
+	<hr></hr>
+	<div class="progress progress-striped active">
+		<div class="progress-bar" role="progressbar"
+		   aria-valuenow="50" aria-valuemin="10" aria-valuemax="100"
+		   style="width: 20%">
+		   <span class="sr-only">20% completado</span>
+		</div>
+	</div>
+
+	<div class="panel panel-primary">
+	<div class="panel-heading"><h1 class="panel-title text-center">Datos del perceptor que efectua la comunicación</h1></div>
+	<div class="panel-body">
+		<form role="form" action="descendientes.html" class="form-horizontal">
+	
+	<div class="form-group form-horizontal">
+		<label class="col-lg-5 control-label text-right"> NIF: </label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" id="nif" placeholder="NIF" ></div>
+	</div>
+	<div class="form-group form-horizontal">
+		<label class="col-lg-5 control-label text-right"> Nombre y apellidos: </label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" id="nyap" placeholder="Nombre y apellidos" ></div>
+	</div>
+	<div class="form-group form-horizontal">
+		<label class="col-lg-5 control-label text-right"> Año de nacimiento: </label>
+		<div class="col-lg-5">
+			<input type="date" class="form-control" id="fecha"></div>
+	</div>
+	
+	<div class="form-group text-center">
+	  <label for="label_anualidades"> Situación familiar </label><br/>
+	  <input type="radio" name="situacionf" id="op1" checked="checked" /> Soltero/a, viudo/a, divorciado/a o separado/a... <a href="javascript:popUp1()"><IMG SRC="help.png" id="help1" ></a><br/>
+	    <div id="popup1" style="display: none;">
+				<div class="content-popup">
+					<div class="close"><a href="#" id="close1"><img src="close.png"/></a></div>
+					<div>
+					<h2>Ayuda</h2>
+						<span class="declaracion">Soltero/a, viudo/a, divorciado/a o separado/a legalmente con hijos solteros menores de 18 años o incapacitados judicialmente y sometidos a patria potestad prorrogada o rehabilitada que conviven exclusivamente con Vd., sin convivir también con el otro progenitor, siempre que proceda consignar al menos un hijo o descendiente en el apartado 2 de este documento</span>
+					</div>
+				</div>
+		</div>
+	  <input type="radio" name="situacionf" id="op2" /> Casado/a y no separado/a legalmente... <a href="javascript:popUp2()"><IMG SRC="help.png" id="help2"></a><br/>
+				<div id="popup2" style="display: none;">
+					<div class="content-popup">
+						<div class="close"><a href="#" id="close2"><img src="close.png"/></a></div>
+						<div>
+						<h2>Ayuda</h2>
+							<span class="declaracion">Casado/a y no separado/a legalmente cuyo cónyuge no obtiene rentas superiores a 1.500 euros anuales, excluidas las exentas</span>
+					</div>
+				</div>
+		</div>
+			<div class ="oculto" id="oculto" style="display: none;"> 
+				<label  class="col-lg-5 control-label text-right">NIF del conyuge </label>
+			<div class="col-lg-5">
+				<input type="text" class="form-control" id="nif_cy"
+				placeholder="NIF Cónyuge">
+			</div>
+			</br> </br> 
+			</div> 
+	  <input type="radio" name="situacionf" id="op3" /> Situación familiar distinta de las dos anteriores... <a href="javascript:popUp3()"><IMG SRC="help.png" id="help3"></a>
+		<div id="popup3" style="display: none;">
+					<div class="content-popup">
+						<div class="close"><a href="#" id="close3"><img src="close.png"/></a></div>
+						<div>
+						<h2>Ayuda</h2>
+							<span class="declaracion">Situación familiar distinta de las dos anteriores (solteros sin hijos, casados cuyo cónyuge obtiene rentas superiores a 1.500 euros anuales, etc...). Marque también esta casilla si no desea manifestar su situación familiar.</span>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group text-center">
+		<label for="label_anualidades">Discapacidad</label> <br/>
+		<tr> 
+			<td width="60%"><div class="btn-group boton" data-toggle="buttons"> 
+			<label class="btn btn-primary active" tabIndex="-1"> 
+			<input type="radio" > Sin discapacidad 
+			</label> 
+			<label class="btn btn-primary " tabIndex="-1"> 
+			<input type="radio" > <= 33% & < 65% 
+			</label> 
+			<label class="btn btn-primary " tabIndex="-1"> 
+			<input type="radio" > >= 65% 
+			</label> 
+			</div></td> 
+		</tr> 
+	</div>
+	<div class="form-group text-center">
+		<span class="texto2">Además, tengo acreditada la necesidad de ayuda de terceras personas o movilidad reducida.</span></br>
+		<div class="btn-group boton" data-toggle="buttons">
+			<label class="btn btn-info">
+			<input type="radio" > Cumplo lo indicado
+			</label>
+			<label class="btn btn-info">
+			<input type="radio"> No cumplo lo indicado
+			</label>
+		</div>
+	</div>
+  
+	<div class="form-group">
+			<div class="text-center">
+				<label for="label_anualidades">Movilidad geográfica</label> <br/>
+				<span>Si anteriormente estaba Vd. en situación de desempleo e inscrito en la oficina de empleo y la aceptación del puesto de trabajo actual ha exigido el traslado de su residencia habitual a un nuevo municipio, indique la fecha de dicho traslado.</br>
+				</br>
+				<div class="col-lg-12">
+				<div class="text-center"><input type="date" class="form-control text-center" id="mov_gr" placeholder="Fecha traslado" /></span></div><br/>
+			</div>
+		</div>
+	</div>
+		<!--
+	cambiar width en css de mov_gr
+	-->
+	<div class="form-group">
+		<div class="text-center">
+			<label for="label_anualidades">Obtención de rendimientos con período de generación superior a 2 años durante los 5 períodos impositivos anteriores:</label><br/>
+		<span>Marque esta casilla si, en el plazo comprendido en los 5 períodos impositivos anteriores al ejercicio al que corresponde la presente comunicación, ha percibido rendimientos del trabajo con período de generación superior a 2 años, a los que, a efectos del cálculo del tipo de retención le haya sido aplicada la reducción por irregularidad contemplada en el artículo 18.2 de la Ley del Impuesto y, sin embargo, posteriormente usted no haya aplicado la citada reducción en su correspondiente autoliquidación del Impuesto sobre la Renta.</span>
+		</br></br>
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-info">
+			<input type="radio" > Cumplo lo indicado
+			</label>
+			<label class="btn btn-info">
+			<input type="radio"> No cumplo lo indicado
+			</label>
+		</div>
+		</div>
+	</div><br/><br/>
+ 
+   <center><button type="submit" class="btn btn-primary">Siguiente</button></center>
+	</form>
+	</div>
+</div>
+</div>
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

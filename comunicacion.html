@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agencia Tributaria</title>
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="./css/modelo.css">
+  </head>
+  
+  
+  <body>
+	<div class="container-fluid">
+	<div id="cabecera">
+	</br>
+	<div class="text-center"><h2><span class="negrita"><div id="titulo">Comunicación de datos al pagador</div></span></h2></div>
+	<div class="text-center"><h2><small class="negrita"><div id="titulo">(artículo 88 del Reglamento del IRPF)</div></small> </h2></div>
+	<div class="text-center"><h4><div id="titulo">Impuesto sobre la Renta de las Personas Físicas y <br>Retenciones sobre rendimientos del trabajo</div></h4></div>	
+	<div class="text-right"><h2><span class="label label-primary">Modelo 145</span></h2></div>
+	</div>
+
+<ul class="nav nav-tabs nav-justified">
+  <li><a href="inicio.html">Inicio</a></li>
+  <li><a href="perceptor.html">Datos del perceptor</a></li>
+  <li><a href="descendientes.html">Descendientes y ascendientes</a></li>
+  <li><a href="pensiones.html">Pensiones y pagos</a></li>
+  <li class="active"><a href="comunicacion.html">Comunicación y recibo</a></li>
+  <li><a href="confirmacion.html">Confirmación</a></li>
+</ul>
+<hr></hr>
+  <div class="progress progress-striped active">
+  <div class="progress-bar" role="progressbar"
+       aria-valuenow="50" aria-valuemin="10" aria-valuemax="100"
+       style="width: 75%">
+    <span class="sr-only">75% completado</span>
+  </div>
+  
+	<hr></hr>
+	</div>
+  <div class="panel panel-primary">      
+	<div class="panel-heading"><h1 class="panel-title text-center">Fecha y firma de la comunicación/ Acuse de recibo</h1></div>
+	<div class="panel-body">
+	<form class="form-horizontal" name="regform" method="post">	<!-- FOOOOOORM -->		
+  
+  <div class="form-group">
+			<label for="label_yo" class="col-lg-5 control-label">Yo:</label>
+			<div class="col-lg-5">
+				<input type="text" name="nombre" class="form-control" id="comunicacion-nombre" placeholder="Nombre y apellidos">
+	
+			</div>
+		</div>
+  
+  <div class="form-group text-center">
+		<span> Manifiesto ser contribuyente del IRPF y declaro que son ciertos los datos arriba indicados, presentando ante la empresa o entidad pagadora la presente comunicación de mi situación personal y familiar, o de 
+				su variación, a los efectos previstos en el artículo 88 del Reglamento del IRPF.</span><br><br>
+		<div class="btn-group" data-toggle="buttons">
+		  <label class="btn btn-primary ">
+			<input type="radio" > Cumplo lo indicado
+		  </label>
+		  <label class="btn btn-primary">
+			<input type="radio"> No cumplo lo indicado
+		  </label>
+		</div>
+  </div> 
+  </br>
+  <div class="form-group">
+			<label for="label_yo" class="col-lg-5 control-label">La empresa/entidad:</label>
+			<div class="col-lg-5">
+				<input type="text" class="form-control" id="comunicacion-nombre" name="empresa" placeholder="Nombre de la empresa/entidad">
+			</div>
+		</div>
+  <div class="form-group text-center">
+		<span class ="text-center"> Acusa recibo de la presente comunicación y documentación.</span><br><br>
+		</div>
+ 
+  <center><button type="submit" onclick="reg()" class="btn btn-primary">Siguiente</button></center>
+  <br>
+
+	</form>
+  </div>
+  </div>
+  </div>
+  
+    
+    <!-- LibrerjQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 			<script language="javascript">
+			  
+			function reg() { 
+			if( document.regform.nombre.value == "" )
+				{   alert( "Insertar nombre!" );
+					document.regform.nombre.focus() ;
+					return false;
+				}
+		/*	if( document.regform.empresa.value == "" )
+				{   alert( "Insertar nombre empresa o entidad!" );
+					document.regform.empresa.focus() ;
+					return false;
+				}*/
+	     localStorage.setItem("nombre", document.regform.nombre.value);
+		 localStorage.setItem("empresa", document.regform.empresa.value);
+		 window.close();
+		 window.open("confirmacion.html");
+					  }
+				</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
